@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const decorElements = document.querySelectorAll('.decor');
     const users = {
-        'Piw piw': '3iw 3iw',
-        'Bd boy': 'jebli'
+        'piw piw': '3iw 3iw',
+        'bd boy': 'jebli'
     };
 
     const redirectUrls = {
-        'Piw piw': 'https://itsme0kjhgf.github.io/gf-space/',
-        'Bd boy': 'https://www.example2.com'
+        'piw piw': 'https://itsme0kjhgf.github.io/gf-space/',
+        'bd boy': 'https://www.example2.com'
     };
 
     const websiteCount = Object.keys(redirectUrls).length;
@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
+        const username = document.getElementById('username').value.toLowerCase();
+        const password = document.getElementById('password').value.toLowerCase();
         const messageElement = document.getElementById('message');
 
         if (users[username] && users[username] === password) {
@@ -36,15 +36,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById('username').addEventListener('input', function() {
-        const value = this.value.trim();
-        if (value === 'Piw piw') {
+        const value = this.value.trim().toLowerCase();
+        if (value === 'piw piw') {
             body.classList.add('romance');
             loginContainer.classList.add('romance');
             decorElements.forEach(decor => decor.classList.add('romance'));
             body.classList.remove('dark-red');
             loginContainer.classList.remove('dark-red');
             decorElements.forEach(decor => decor.classList.remove('dark-red'));
-        } else if (value === 'Bd boy') {
+        } else if (value === 'bd boy') {
             body.classList.add('dark-red');
             loginContainer.classList.add('dark-red');
             decorElements.forEach(decor => decor.classList.add('dark-red'));
@@ -58,4 +58,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-s
