@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     const redirectUrls = {
-        'piw piw': 'https://itsme0kjhgf.github.io/gf-space/',
-        'bd boy': 'https://www.example2.com'
+        'Piw piw': 'https://itsme0kjhgf.github.io/gf-space/',
+        'Bd boy': 'https://www.example2.com'
     };
 
     const websiteCount = Object.keys(redirectUrls).length;
@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('username').addEventListener('input', function() {
         const value = this.value.trim();
-        if (value === 'piw piw') {
+        if (value === 'Piw piw') {
             body.classList.add('romance');
             loginContainer.classList.add('romance');
             decorElements.forEach(decor => decor.classList.add('romance'));
             body.classList.remove('dark-red');
             loginContainer.classList.remove('dark-red');
             decorElements.forEach(decor => decor.classList.remove('dark-red'));
-        } else if (value === 'bd boy') {
+        } else if (value === 'Bd boy') {
             body.classList.add('dark-red');
             loginContainer.classList.add('dark-red');
             decorElements.forEach(decor => decor.classList.add('dark-red'));
