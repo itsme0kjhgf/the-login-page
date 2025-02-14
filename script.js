@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const decorElements = document.querySelectorAll('.decor');
     const users = {
-        'piw piw': '3iw 3iw',
-        'bd boy': 'jebli'
+        'Piw piw': '3iw 3iw',
+        'Bd boy': 'jebli'
     };
 
     const redirectUrls = {
