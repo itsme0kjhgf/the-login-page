@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const decorElements = document.querySelectorAll('.decor');
     const users = {
         'piw piw': '3iw 3iw',
-        'jebli': 'lmabli'
+        'bd boy': 'jebli'
     };
 
     const redirectUrls = {
         'piw piw': 'https://itsme0kjhgf.github.io/gf-space/',
-        'jebli': 'https://itsme0kjhgf.github.io/jebli-bd/'
+        'bd boy': 'https://www.example2.com'
     };
 
     const websiteCount = Object.keys(redirectUrls).length;
@@ -19,16 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const username = document.getElementById('username').value.trim().toLowerCase();
-        const password = document.getElementById('password').value.trim().toLowerCase();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
         const messageElement = document.getElementById('message');
-
-        // Check for empty fields
-        if (!username || !password) {
-            messageElement.textContent = 'Please fill in both fields.';
-            messageElement.className = 'error';
-            return;
-        }
 
         if (users[username] && users[username] === password) {
             messageElement.textContent = 'Login successful! Redirecting...';
@@ -43,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById('username').addEventListener('input', function() {
-        const value = this.value.trim().toLowerCase();
+        const value = this.value.trim();
         if (value === 'piw piw') {
             body.classList.add('romance');
             loginContainer.classList.add('romance');
@@ -51,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.remove('dark-red');
             loginContainer.classList.remove('dark-red');
             decorElements.forEach(decor => decor.classList.remove('dark-red'));
-        } else if (value === 'jebli') {
+        } else if (value === 'bd boy') {
             body.classList.add('dark-red');
             loginContainer.classList.add('dark-red');
             decorElements.forEach(decor => decor.classList.add('dark-red'));
@@ -65,3 +58,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+s
