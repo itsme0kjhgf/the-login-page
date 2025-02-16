@@ -13,8 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'jebli': 'https://itsme0kjhgf.github.io/jebli-bd/'
     };
 
-    const websiteCount = Object.keys(redirectUrls).length;
-    websiteCountElement.textContent = `Websites made: ${websiteCount}`;
+
 
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
