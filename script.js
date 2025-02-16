@@ -19,9 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const username = document.getElementById('username').value.toLowerCase();
-        const password = document.getElementById('password').value.toLowerCase();
+        const username = document.getElementById('username').value.trim().toLowerCase();
+        const password = document.getElementById('password').value.trim().toLowerCase();
         const messageElement = document.getElementById('message');
+
+        // Check for empty fields
+        if (!username || !password) {
+            messageElement.textContent = 'Please fill in both fields.';
+            messageElement.className = 'error';
+            return;
+        }
 
         if (users[username] && users[username] === password) {
             messageElement.textContent = 'Login successful! Redirecting...';
