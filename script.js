@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const decorElements = document.querySelectorAll('.decor');
     const users = {
         'piw piw': '3iw 3iw',
-        'bd boy': 'jebli'
+        'jebli': 'lmabli'
     };
 
     const redirectUrls = {
         'piw piw': 'https://itsme0kjhgf.github.io/gf-space/',
-        'bd boy': 'https://www.example2.com'
+        'jebli': 'https://itsme0kjhgf.github.io/jebli-bd/'
     };
 
     const websiteCount = Object.keys(redirectUrls).length;
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.remove('dark-red');
             loginContainer.classList.remove('dark-red');
             decorElements.forEach(decor => decor.classList.remove('dark-red'));
-        } else if (value === 'bd boy') {
+        } else if (value === 'jebli') {
             body.classList.add('dark-red');
             loginContainer.classList.add('dark-red');
             decorElements.forEach(decor => decor.classList.add('dark-red'));
@@ -58,4 +58,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-s
